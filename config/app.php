@@ -167,6 +167,8 @@ return [
          * Package Service Providers...
          */
 
+        Backpack\Base\BaseServiceProvider::class,
+
         //
 
         /*
