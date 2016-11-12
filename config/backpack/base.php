@@ -48,7 +48,7 @@ return [
     */
 
 //    'registration_open' => (env('APP_ENV') == 'local') ? true : false,
-    'registration_open' => false,
+    'registration_open' => true,
 
 
     /*
