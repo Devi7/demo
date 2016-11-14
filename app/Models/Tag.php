@@ -5,7 +5,8 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Backpack\CRUD\CrudTrait;
 
-class Tag extends Model {
+class Tag extends Model
+{
 
     use CrudTrait;
 
@@ -19,7 +20,7 @@ class Tag extends Model {
     // protected $primaryKey = 'id';
     // protected $guarded = [];
     // protected $hidden = ['id'];
-    protected $fillable = ['name'];
+    protected $fillable = ['id','name'];
     public $timestamps = true;
 
     /*

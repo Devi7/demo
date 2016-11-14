@@ -25,6 +25,15 @@ class User extends Authenticatable
         return $this->hasMany('App\Models\Article', 'article_tag');
     }
 
+
+    /**
+     * @return array
+     */
+    public function tags()
+    {
+        return $this->belongsTo('App\Models\Tag', 'id');
+    }
+
     /**
      * Send the password reset notification.
      *
@@ -42,7 +51,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password', 'parent'
+        'name', 'email', 'password', 'parent', 'tag_id'
     ];
 
     /**
