@@ -40,6 +40,11 @@ class Tag extends Model
         return $this->hasMany('App\Models\Article', 'article_tag');
     }
 
+    public function users()
+    {
+        return $this->hasMany('App\User', 'tag_id', 'id');
+    }
+
     /*
     |--------------------------------------------------------------------------
     | SCOPES

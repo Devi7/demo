@@ -14,6 +14,16 @@ class User extends Authenticatable
     use HasRoles;
     use Notifiable;
 
+    /**
+     * functions
+     */
+
+    public function getAgents(){
+
+        return '<a href="'.url($this->name).'">'.$this->name.'</a>';
+
+    }
+
     /*
 	|--------------------------------------------------------------------------
 	| RELATIONS
@@ -31,7 +41,7 @@ class User extends Authenticatable
      */
     public function tags()
     {
-        return $this->belongsTo('App\Models\Tag', 'id');
+        return $this->belongsTo('App\Models\Tag', 'tag_id');
     }
 
     /**
@@ -51,7 +61,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password', 'parent', 'tag_id'
+        'name', 'tag_id', 'email', 'password', 'parent'
     ];
 
     /**

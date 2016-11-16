@@ -22,7 +22,8 @@ class UserCrudController extends CrudController
             [
                 'name' => 'name',
                 'label' => trans('backpack::permissionmanager.name'),
-                'type' => 'text',
+                'type' => 'model_function',
+                'function_name' => 'getAgents'
             ],
             [
                 'name' => 'email',
